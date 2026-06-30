@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\Pricing\Resources\PriceList;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\Pricing\Models\PriceList;
 use JeffersonGoncalves\FilamentCommerce\Pricing\CommercePricingPlugin;
@@ -26,9 +26,9 @@ class PriceListResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return PriceListForm::configure($schema);
+        return PriceListForm::configure($form);
     }
 
     public static function table(Table $table): Table
